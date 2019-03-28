@@ -11,6 +11,13 @@ public class CustomerServiceImpl implements CustomerService {
     // customer repo implementation
     private CustomerRepository customerRepository;
 
+    public CustomerServiceImpl() {
+
+    }
+    public CustomerServiceImpl(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
     // simple pass through method
     public List<Customer> findAll() {
         return customerRepository.findAll();
