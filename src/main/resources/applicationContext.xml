@@ -8,8 +8,8 @@
           class="gour.indrajeet.repository.HibernateCustomerRepositoryImpl"/>
 
     <bean name="customerService"
-          class="gour.indrajeet.service.CustomerServiceImpl">
-        <constructor-arg index="0" ref="customerRepository"/>
+          class="gour.indrajeet.service.CustomerServiceImpl" autowire="byType">
+        <!--<constructor-arg index="0" ref="customerRepository"/>-->
 
     </bean>
 
